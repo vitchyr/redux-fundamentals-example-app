@@ -1,6 +1,7 @@
 import React from 'react'
 
 import { useSelector, useDispatch } from 'react-redux'
+import { selectTodos } from '../todos/todosSlice'
 import { availableColors, capitalize } from '../filters/colors'
 import { StatusFilters, colorFilterChanged } from '../filters/filtersSlice'
 
@@ -75,7 +76,7 @@ const ColorFilters = ({ value: colors, onChange }) => {
 
 const Footer = () => {
     const todosRemaining = useSelector(state => {
-        const uncompletedTodos = state.todos.filter(todo => ~todo.completed)
+        const uncompletedTodos = selectTodos(state).filter(todo => ~todo.completed)
         return uncompletedTodos.length
     })
     const { status, colors } = useSelector(state => state.filters)
