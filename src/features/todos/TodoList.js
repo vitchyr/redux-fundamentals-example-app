@@ -10,7 +10,6 @@ const TodoList = () => {
     const loadingStatus = useSelector(selectStatus)
 
     if (loadingStatus === 'loading') {
-        console.log("loading todos")
         return (
             <div className="todo-list">
                 <div className="loader" />
