@@ -7,10 +7,3 @@ const rootReducer = combineReducers({
     filters: filtersReducer,
 })
 export default rootReducer
-
-//export default function rootReducer(state = {}, action) {
-    //return {
-        //todos: todosReducer(state.todos, action),
-        //filters: filtersReducer(state.filters, action),
-    //}
-//}

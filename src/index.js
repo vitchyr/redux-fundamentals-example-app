@@ -13,7 +13,6 @@ store.dispatch(fetchTodos())
 
 console.log('Initial state ', store.getState());
 
-
 const result = store.dispatch({ type: 'todos/todoAdded', payload: 'Try creating a store' })
 console.log('result', result)
 
